@@ -23,8 +23,7 @@ conn = mongo_connect(MONGO_URI)
 
 coll = conn[DATABASE][COLLECTION]
 
-for doc in documents:
-    print(doc)
+
 
 new_doc = {
     "first": "douglas",
@@ -40,3 +39,5 @@ coll.insert_one(new_doc)
 
 documents = coll.find()
 
+for doc in documents:
+    print(doc)
